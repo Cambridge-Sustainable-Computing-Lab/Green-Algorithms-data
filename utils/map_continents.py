@@ -72,7 +72,7 @@ if __name__ == "__main__":
             "TW": "Asia",
             "GLOBAL": "World"
         }
-        df_with_continents = map_continents(df_elec_maps, df_continents_map, country_col='ISO-alpha2 Code', 
+df_with_continents = map_continents(df_without_continents=df_elec_maps, df_with_continents=df_continents_map, country_col='ISO-alpha2 Code', 
                                             continent_col='Region Name', edge_cases=edge_cases)
         df_with_continents.to_csv(args.savepath, index=False)
         print(f"Continents mapped successfully and saved to '{args.savepath}'.")
